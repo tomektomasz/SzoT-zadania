@@ -9,12 +9,11 @@ import org.json.JSONObject;
 //import aura.ReadJson;
 
 public class Stacja_ISS {
-	public static void main(String[] args) {
+	public static void main(String[] args)  throws Exception {
 		
 			
-		//String opis=answer("http://api.open-notify.org/iss-now.json");
-		JSONObject jsonOb = new JSONObject("{\"timestamp\": 1565700451, \"message\": \"success\", \"iss_position\": {\"latitude\": \"41.5111\", \"longitude\": \"58.7066\"}}");
-		//String dataD_n= jsonOb.getJSONObject("data").getJSONArray("weather").getJSONObject(n).getString("date");
+		String opis=answer("http://api.open-notify.org/iss-now.json");
+		JSONObject jsonOb = new JSONObject(opis);
 		String dataS = jsonOb.getString("timestamp"); 
 		System.out.println(dataS);
 	}
