@@ -2,14 +2,14 @@ package Example;
 
 import java.util.Arrays;
 
-public class Anagram {
+public class Palindrom {
 	public static void main(String[] args) {
 		
 		System.out.println(anag("  kajak ","k a  ja k"));
 	}
 
 	private static boolean anag(String an1, String an2) {
-		
+				
 		char[] ch1= an1.replace(" ","").toCharArray();
 		int sizeCh1 = ch1.length;
 		char[] revCh1 = new char[sizeCh1];
@@ -25,3 +25,5 @@ public class Anagram {
 	}
 
 }
+
+//sprawdzenie czy dany wyraz lub zdanie czytane od przodu lub od tyłu są takie same
